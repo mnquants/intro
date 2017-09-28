@@ -29,11 +29,11 @@ blackScholes <- function(priceTS, type, strike, days, rf, carryCost) {
 }
 
 # NVDA price
-getSymbols("NVDA")
+getSymbols("NVDA", src="google")
 # 1 year worth of closed prices
 price <- NVDA$NVDA.Close["2016-09-26::"]
 
 # assumes risk-free rate of 0.0123
-blackScholes(priceTS = price, type = "c", strike = 180.00, days = 1, 
+blackScholes(priceTS = price, type = "p", strike = 180.00, days = 1, 
              rf = 0.0123, carryCost = 0.0)
 
