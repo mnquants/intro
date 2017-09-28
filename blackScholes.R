@@ -20,8 +20,15 @@ calcVol <- function(priceTS) {
   return((sd(priceTS) * sqrt(250) * 100)/100)
 }
 
-# general black scholes model to calclate 
-# call or put options 
+#' General Black-Scholes formula 
+#' @param priceTS Price Timeseries
+#' @param type Call, "c", or Put, "p"
+#' @param strike Strike Price
+#' @param days Number of Days
+#' @param rf Risk-Free Rate
+#' @param carryCost Cost-of-Carry 
+#' @return Options Data
+#' @export
 blackScholes <- function(priceTS, type, strike, days, rf, carryCost) {
   GBSOption(TypeFlag = type, S = as.numeric(tail(priceTS, n=1)), X = strike, Time = days/365, 
             r = rf, b = carryCost, sigma = calcVol(logReturns(priceTS)),
