@@ -10,14 +10,20 @@
 library(fOptions)
 library(quantmod)
 
-# log returns - returns without NA values
+#' Calculate Log Returns
+#' @param priceTS Price Timeseries
+#' @return Log Returns  
+#' @export
 logReturns <- function(priceTS) {
   return(na.omit(TTR::ROC(priceTS)))
 }
 
-# annualized volatility
+#' Calculate Annualized Volatility
+#' @param priceTS Price Timeseries
+#' @return Annualized Volatility 
+#' @export
 calcVol <- function(priceTS) {
-  return((sd(priceTS) * sqrt(250) * 100)/100)
+  return((sd(logReturns(priceTS)) * sqrt(250) * 100)/100)
 }
 
 #' General Black-Scholes formula 
@@ -31,7 +37,7 @@ calcVol <- function(priceTS) {
 #' @export
 blackScholes <- function(priceTS, type, strike, days, rf, carryCost) {
   GBSOption(TypeFlag = type, S = as.numeric(tail(priceTS, n=1)), X = strike, Time = days/365, 
-            r = rf, b = carryCost, sigma = calcVol(logReturns(priceTS)),
+            r = rf, b = carryCost, sigma = calcVol(priceTS),
             title = NULL, description = NULL)
 }
 
