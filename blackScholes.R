@@ -1,5 +1,5 @@
 # blackScholes.R
-# Black-Scholes options pricing 
+# Black-Scholes Option Pricing
 # Author: Kyle Loomis
 # Date Updated: 9/27/17
 # Summary: Stores all functions necessary to
@@ -49,4 +49,3 @@ price <- NVDA$NVDA.Close["2016-09-26::"]
 # assumes risk-free rate of 0.0123
 blackScholes(priceTS = price, type = "c", strike = 180.00, days = 1, 
              rf = 0.0123, carryCost = 0.0)
-
