@@ -1,10 +1,9 @@
-# loan_status.R
-# Logistic Regress in R
+# Logistic Regression in R
 # Author: Yeshi Lhewa
-# Date Updated: 10/1/17
-# Summary: This file is meant to highlight 
-#          the process for doing Logistic 
-#          Regression in R
+# Date: 10/1/17
+# Desc: This file is meant to highlight 
+#       the process for doing Logistic 
+#       Regression in R
 
 #Response Variable is Loan.Status with the value being either Fully Paid or Charged Off which means original 
 #creditor has given up on being repaid according to the original terms of the loan.
@@ -60,11 +59,11 @@ testing <- credit_data_replace[ind == 3,]
 
 #Question 2- What is a training, validation and testing set and why are they important in machine learning?
 
-#Now we have everything in place so now we can finnaly do logistic regression on our training set.
+#Now we have everything in place so we can finally do logistic regression on our training set.
 modl1 <- glm(Loan.Status~., data = training, family = "binomial")
 summary(modl1)
 
-#We then predict the whether or not the loan was fully paid in the validation set and then we get probabilities as 
+#We then predict whether or not the loan was fully paid in the validation set and then we get probabilities as 
 #our predictions. You then change the ones greater than 50% to fully paid and the rest into charged off.
 pred <- predict(modl1, validation[ ,-1], type = "response")
 modl1_pred_val <- rep("Charged Off",length(validation$Loan.Status))

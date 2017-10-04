@@ -1,8 +1,7 @@
-# blackScholes.R
 # Black-Scholes Option Pricing
 # Author: Kyle Loomis
 # Date Updated: 9/27/17
-# Summary: Stores all functions necessary to
+# Desc: Stores all functions necessary to
 #          calculate options price
 
 # install.packages("fOptions")

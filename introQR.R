@@ -1,9 +1,8 @@
-# introQR.R
 # Introduction to Quantitative Research
 # Author: Kyle Loomis
-# Date Updated: 9/24/17
-# Summary: This file is meant to highlight the quantitative
-#          research workflow at a very high level.
+# Date: 9/24/17
+# Desc: This file is meant to highlight the quantitative
+#       research workflow at a very high level.
 
 
 # installing pacakges
