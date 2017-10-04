@@ -1,5 +1,8 @@
 # Introductory Tools for Quantitative Research
 
+## Resources
+1. Style Guide: https://google.github.io/styleguide/Rguide.xml
+
 ## Introduction to Quantitative Research Workflow
 introQR.R - note the following main ideas:
 1. Packages - installation/loading packages
