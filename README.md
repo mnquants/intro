@@ -1,7 +1,8 @@
 # Introductory Tools for Quantitative Research
 
 ## Resources
-1. Style Guide: https://google.github.io/styleguide/Rguide.xml
+1. [Style Guide](https://google.github.io/styleguide/Rguide.xml)
+2. [R Resources (Free Courses, Books, Tutorials, & Cheatsheets)](https://paulvanderlaken.com/2017/08/10/r-resources-cheatsheets-tutorials-books/)
 
 ## Introduction to Quantitative Research Workflow
 introQR.R - note the following main ideas:
