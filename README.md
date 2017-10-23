@@ -3,6 +3,7 @@
 ## Resources
 1. [R Style Guide](https://google.github.io/styleguide/Rguide.xml)
 2. [R Resources (Free Courses, Books, Tutorials, & Cheatsheets)](https://paulvanderlaken.com/2017/08/10/r-resources-cheatsheets-tutorials-books/)
+3. [Data Cleaning](http://qsel.columbia.edu/formhub.R/demo/RemoveOutliers.html)
 
 ## Workflow
 [Introduction to Quant Researh](introQR.R) - note the following main ideas:
